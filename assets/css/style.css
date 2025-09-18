@@ -31,23 +31,43 @@ body.dark {
   --skill-bg: #222222;
 }
 
+#language-toggle {
+  width: 2.5rem;
+  height: 1.7rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#language-toggle img {
+  width: 100%;
+  height: 1.5rem;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
+  background: rgba(235, 221, 221, 0.7);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid #eee;
   z-index: 999;
 }
 
+.navbar .nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
 body.dark .navbar {
-  background: rgba(17, 17, 17, 0.7);
+  background: rgba(35, 34, 34, 0.7);
   border-color: #333;
 }
 

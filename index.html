@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Trần Kính Hoàng</title>
-    <link rel="stylesheet" href="portfolio/assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <button id="language-toggle">
+          <img src="./assets/img/VN.png" />
+        </button>
+        <div class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
         <button id="darkToggle"></button>
       </nav>
     </header>
@@ -25,10 +30,10 @@
       </section>
 
       <section id="about" class="about-me reveal fade-up">
-        <div class="about-me-title">ABOUT ME</div>
+        <div class="section-title about-me-title">ABOUT ME</div>
         <div class="about">
           <div class="avatar">
-            <img src="portfolio/assets/img/avatar.jpg" alt="avatar" />
+            <img src="./assets/img/avatar.jpg" alt="avatar" />
           </div>
           <div class="info">
             <h2>Trần Kính Hoàng / hoaug</h2>
@@ -52,7 +57,7 @@
       </section>
 
       <section id="projects" class="projects reveal fade-up">
-        <div class="projects-title">PROJECTS</div>
+        <div class="section-title projects-title">PROJECTS</div>
         <div class="grid">
           <div class="card">
             <h3>BOT Discord</h3>
@@ -83,7 +88,7 @@
       </section>
 
       <section id="skills" class="skills reveal fade-up">
-        <div class="skills-title">SKILLS</div>
+        <div class="section-title skills-title">SKILLS</div>
         <div class="some-skill">
           <span>C++</span>
           <span>Python</span>
@@ -98,11 +103,11 @@
       </section>
 
       <section id="contact" class="contact reveal fade-up">
-        <div class="contact-title">CONTACT</div>
+        <div class="section-title contact-title">CONTACT</div>
         <div class="contact-info">
           <p>Mở cơ hội thực tập / part-time. Hãy liên hệ với mình 👇</p>
           <form
-            action="https://formspree.io/f/your-id"
+            action="https://formspree.io/f/mdklqojz"
             method="POST"
             class="contact-form"
           >
@@ -128,6 +133,6 @@
       <p>© 2025 Trần Kính Hoàng.</p>
     </footer>
 
-    <script src="portfolio/assets/script/main.js"></script>
+    <script type="module" src="./assets/script/main.js"></script>
   </body>
 </html>
