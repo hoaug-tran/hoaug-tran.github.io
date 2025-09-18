@@ -38,6 +38,8 @@ body.dark {
   display: flex;
   align-items: center;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 #language-toggle img {
@@ -401,7 +403,29 @@ footer p {
   transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
+/* MOBILE FIX - Chỉ thay đổi navbar trên mobile */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .navbar .nav {
+    order: 1;
+    width: 100%;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+
+  #language-toggle,
+  #darkToggle {
+    order: 2;
+  }
+
   .about {
     flex-direction: column;
     text-align: center;

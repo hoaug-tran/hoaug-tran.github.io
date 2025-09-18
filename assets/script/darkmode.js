@@ -14,17 +14,14 @@ export function initDarkMode() {
   reveals.forEach((r) => observer.observe(r));
 
   const toggle = document.getElementById("darkToggle");
-  const icon = toggle.querySelector(".icon");
 
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
-    icon.textContent = "🌙";
   }
 
   toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
     const isDark = document.body.classList.contains("dark");
-    icon.textContent = isDark ? "🌙" : "☀️";
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 }
