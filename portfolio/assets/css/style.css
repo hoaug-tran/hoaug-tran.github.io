@@ -144,6 +144,7 @@ body.dark #darkToggle::after {
   margin-bottom: 1.5rem;
   color: var(--text);
   position: relative;
+  margin-top: 25px;
 }
 
 .about-me-title::after,
