@@ -1,7 +1,5 @@
-const s = ["Xin chào !", "Mình là Trần Kính Hoàng", "Mình là developer "];
-
+const s = ["Xin chào!", "Mình là Trần Kính Hoàng", "Mình là một developer"];
 const tE = document.querySelector(".typing");
-
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -24,7 +22,6 @@ function typeEffect() {
   if (!isDeleting) {
     tE.textContent = currentText.substring(0, charIndex + 1);
     charIndex++;
-
     if (charIndex === currentText.length) {
       isDeleting = true;
       setTimeout(typeEffect, pauseTime);
@@ -37,17 +34,16 @@ function typeEffect() {
     } else {
       isDeleting = false;
       textIndex = (textIndex + 1) % s.length;
+      charIndex = commonPrefix.length;
     }
   }
 
-  const speed = isDeleting ? deleteSpeed : typeSpeed;
-  setTimeout(typeEffect, speed);
+  setTimeout(typeEffect, isDeleting ? deleteSpeed : typeSpeed);
 }
 
 typeEffect();
 
 const reveals = document.querySelectorAll(".reveal");
-
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -59,5 +55,19 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.1 }
 );
-
 reveals.forEach((r) => observer.observe(r));
+
+const toggle = document.getElementById("darkToggle");
+const icon = toggle.querySelector(".icon");
+
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  icon.textContent = "🌙";
+}
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.contains("dark");
+  icon.textContent = isDark ? "🌙" : "☀️";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});

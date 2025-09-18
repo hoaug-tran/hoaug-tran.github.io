@@ -3,13 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio - Hoaug</title>
     <link rel="stylesheet" href="portfolio/assets/css/style.css" />
   </head>
   <body>
-    <!-- <header>
-      <nav></nav>
-    </header> -->
+    <header>
+      <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="darkToggle"></button>
+      </nav>
+    </header>
 
     <main class="container">
       <section class="welcome">
@@ -17,49 +23,66 @@
           <span class="typing"></span>
         </div>
       </section>
-      <section class="about-me reveal">
+
+      <section id="about" class="about-me reveal fade-up">
         <div class="about-me-title">ABOUT ME</div>
         <div class="about">
           <div class="avatar">
-            <img src="/portfolio/assets/img/avatar.jpg" alt="" />
+            <img src="portfolio/assets/img/avatar.jpg" alt="avatar" />
           </div>
           <div class="info">
             <h2>hoaug</h2>
+            <p>Sinh viên Mạng máy tính và truyền thông dữ liệu tại UNETI.</p>
+            <p>Yêu thích công nghệ, lập trình và mạng máy tính.</p>
             <p>
-              Sinh viên Mạng máy tính và truyền thông dữ liệu Trường Đại học
-              Kinh Tế - Kỹ Thuật Công Nghiệp @ UNETI
+              Email:
+              <a href="mailto:hoaug@trkhoang.online">hoaug@trkhoang.online</a>
             </p>
-            <p>Hiện tại chỉ là một sinh viên với các kĩ năng chưa đầy đủ.</p>
-            <p>Email: <a href="#">hoaug@trkhoang.online</a></p>
-            <p>Github: <a href="#">github.com/hoaug-tran</a></p>
-            <p>Facebook: <a href="#">facebook.com/hoaugtr</a></p>
-          </div>
-        </div>
-        <div class="divider"></div>
-      </section>
-      <section class="projects reveal">
-        <div class="projects-title">PROJECTS</div>
-        <div class="grid">
-          <div class="card">
-            <h3>BOT Discord</h3>
             <p>
-              Sử dụng discord.js trong Node.js để xây dựng bot nhằm phục vụ học
-              tập
+              Github:
+              <a href="https://github.com/hoaug-tran">github.com/hoaug-tran</a>
             </p>
-          </div>
-          <div class="card">
-            <h3>UNETI Notes</h3>
-            <p>Websites tổng hợp ghi chú & code mẫu cho môn Python và Java</p>
-          </div>
-          <div class="card">
-            <h3>Portfolio này</h3>
-            <p>Thiết kế tối giản, typography mạnh mẽ, HTML + CSS cơ bản</p>
+            <p>
+              Facebook:
+              <a href="https://facebook.com/hoaugtr">facebook.com/hoaugtr</a>
+            </p>
           </div>
         </div>
         <div class="divider"></div>
       </section>
 
-      <section class="skills reveal">
+      <section id="projects" class="projects reveal fade-up">
+        <div class="projects-title">PROJECTS</div>
+        <div class="grid">
+          <div class="card">
+            <h3>BOT Discord</h3>
+            <p>Bot học tập viết bằng discord.js trong Node.js</p>
+            <div class="card-links">
+              <a href="https://github.com/hoaug-tran">Code</a>
+              <a href="https://github.com/hoaug-tran">Demo</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>UNETI Notes</h3>
+            <p>Web tổng hợp ghi chú & code Python, Java</p>
+            <div class="card-links">
+              <a href="https://github.com/hoaug-tran">Code</a>
+              <a href="https://github.com/hoaug-tran">Demo</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Portfolio này</h3>
+            <p>Thiết kế tối giản, typography mạnh mẽ</p>
+            <div class="card-links">
+              <a href="https://github.com/hoaug-tran/portfolio">Code</a>
+              <a href="http://trkhoang.online/">Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+      </section>
+
+      <section id="skills" class="skills reveal fade-up">
         <div class="skills-title">SKILLS</div>
         <div class="some-skill">
           <span>C++</span>
@@ -73,11 +96,30 @@
         </div>
         <div class="divider"></div>
       </section>
-      <section class="contact reveal">
+
+      <section id="contact" class="contact reveal fade-up">
         <div class="contact-title">CONTACT</div>
         <div class="contact-info">
-          <p>Mở cơ hội thực tập / part-time. Cứ email cho mình nhé!</p>
-          <a href="btn">Gửi Email</a>
+          <p>Mở cơ hội thực tập / part-time. Hãy liên hệ với mình 👇</p>
+          <form
+            action="https://formspree.io/f/your-id"
+            method="POST"
+            class="contact-form"
+          >
+            <input type="text" name="name" placeholder="Tên của bạn" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email của bạn"
+              required
+            />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Lời nhắn..."
+            ></textarea>
+            <button type="submit">Gửi</button>
+          </form>
         </div>
       </section>
     </main>
@@ -85,6 +127,7 @@
     <footer>
       <p>© 2025 Trần Kính Hoàng.</p>
     </footer>
-    <script src="/portfolio/assets/script/main.js"></script>
+
+    <script src="portfolio/assets/script/main.js"></script>
   </body>
 </html>
