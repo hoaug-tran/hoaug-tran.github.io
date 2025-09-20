@@ -31,6 +31,10 @@ body.dark {
   --skill-bg: #222222;
 }
 
+section {
+  scroll-margin-top: 100px;
+}
+
 #language-toggle {
   width: 2.5rem;
   height: 1.7rem;
@@ -403,7 +407,6 @@ footer p {
   transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
-/* MOBILE FIX - Chỉ thay đổi navbar trên mobile */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: row;
