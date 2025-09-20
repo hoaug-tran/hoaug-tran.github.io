@@ -457,6 +457,8 @@ body.dark #darkToggle::after {
 
 .contact-info p {
   color: var(--text);
+  text-align: center;
+  word-break: break-word;
 }
 
 .contact-form {
