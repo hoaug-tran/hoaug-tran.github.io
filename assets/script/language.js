@@ -6,7 +6,7 @@ const langIcon = langToggle.querySelector("img");
 let currentLang = localStorage.getItem("language") || "VN";
 
 const textsVN = ["Giới thiệu", "Dự án", "Kỹ năng", "Liên hệ"];
-const textsEN = ["About", "Projects", "Skills", "Contact"];
+const textsEN = ["About me", "Projects", "Skills", "Contact"];
 const infoVN = [
   "Sinh viên ngành Mạng máy tính & truyền thông dữ liệu @ UNETI.",
   "Yêu thích công nghệ, lập trình và mạng máy tính.",
