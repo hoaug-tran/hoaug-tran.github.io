@@ -1,4 +1,8 @@
 export function initOther() {
+  if (window.innerWidth <= 768) {
+    return () => {};
+  }
+
   const cursor = document.createElement("div");
   cursor.classList.add("cursor");
 
@@ -25,10 +29,20 @@ export function initOther() {
   let currentX = 0,
     currentY = 0;
   let rafId = null;
+  let hasMoved = false;
+
+  cursor.style.opacity = "0";
 
   function updateMousePosition(e) {
     mouseX = e.clientX;
     mouseY = e.clientY;
+
+    if (!hasMoved) {
+      currentX = mouseX;
+      currentY = mouseY;
+      cursor.style.opacity = "1";
+      hasMoved = true;
+    }
   }
   document.addEventListener("mousemove", updateMousePosition, {
     passive: true,
@@ -81,7 +95,9 @@ export function initOther() {
   });
 
   document.addEventListener("mouseleave", () => (cursor.style.opacity = "0"));
-  document.addEventListener("mouseenter", () => (cursor.style.opacity = "1"));
+  document.addEventListener("mouseenter", () => {
+    if (hasMoved) cursor.style.opacity = "1";
+  });
 
   return function cleanup() {
     if (rafId) cancelAnimationFrame(rafId);

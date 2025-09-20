@@ -586,4 +586,11 @@ footer p {
     line-height: 1;
     font-size: 22px;
   }
+
+  .cursor {
+    display: none !important;
+  }
+  * {
+    cursor: auto !important;
+  }
 }
